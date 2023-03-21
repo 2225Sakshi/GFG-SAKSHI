@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def minimumTime(self, N : int, cur : int, pos : List[int], time : List[int]) -> int:
         temp=[]
-        cnt=0
+       
         for i in range(N):
             A=(abs(cur-pos[i]))*time[i]
             temp.append(A)
