@@ -5,22 +5,29 @@ class Solution:
     #Function to find the first non-repeating character in a string.
     def nonrepeatingCharacter(self,s):
         char_count = {}
+        # Count occurrences of each character
         for char in s:
-            if char in char_count:
-                char_count[char] += 1
-            else:
-                char_count[char] = 1
+            char_count[char] = char_count.get(char, 0) + 1
     
+        # Find the first non-repeating character
         for char in s:
             if char_count[char] == 1:
                 return char
-        return -1
-
-
-
-
-
-
+    
+        # If no non-repeating character is found, return '$'
+        return '$'
+            
+        # # for i in s:
+        # #     if(s.find(i, (s.find(i)+1))) == -1:
+        # #         return(i)
+        # #     return '$'
+        # d={}
+        # for i in (s):
+        #     c = s.count(i)
+        #     if c==1:
+        #         return i
+        #     return '$'
+            
     
 
 
