@@ -4,13 +4,18 @@ class Solution:
     ##Complete this function
     # Function to check if given number n is a power of two.
     def isPowerofTwo(self,n):
-        if n==0: return False
-        if n==1: return True
-        while n>1:
-            if n%2!=0: return False
-            n=n/2
-        return True
-        
+        if n <= 0:
+            return False
+    
+    # Bitwise operation to check if there is only one '1' bit in n
+        return (n & (n - 1)) == 0
+        # if n<=0:
+        #     return False
+        # while (n>1):
+        #     if n%2!=0:
+        #         return False
+        #         n=n//2
+        # return True
         ##Your code here
 
 
